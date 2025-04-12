@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Sports Sponsorship</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="description.html">About</a></li>
+            <li><a href="form1.html">Sponsorship Form</a></li>
+            <li><a href="form2.html">Event Proposal</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form id="registerForm" onsubmit="return validateRegistrationForm()">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="new-password">
+                <div id="passwordStrength" class="password-strength"></div>
+                <div id="strengthText" class="strength-text"></div>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">
+                    Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters.
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" autocomplete="new-password">
+            </div>
+            <button type="submit">Register</button>
+            <p style="text-align: center; margin-top: 1rem;">
+                Already have an account? <a href="login.html" style="color: #3498db;">Login here</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

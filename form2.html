@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Proposal - Sports Sponsorship</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="description.html">About</a></li>
+            <li><a href="form1.html">Sponsorship Form</a></li>
+            <li><a href="form2.html">Event Proposal</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Event Sponsorship Proposal</h1>
+        <form id="eventProposalForm" onsubmit="return validateEventProposalForm()">
+            <div class="form-group">
+                <label for="eventName">Event Name</label>
+                <input type="text" id="eventName" name="eventName" placeholder="Enter event name">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter event location">
+            </div>
+            <div class="form-group">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="audience">Expected Audience</label>
+                <input type="number" id="audience" name="audience" placeholder="Enter expected number of attendees">
+            </div>
+            <div class="form-group">
+                <label for="package">Sponsorship Package</label>
+                <select id="package" name="package">
+                    <option value="">Select a package</option>
+                    <option value="platinum">Platinum Package</option>
+                    <option value="gold">Gold Package</option>
+                    <option value="silver">Silver Package</option>
+                    <option value="bronze">Bronze Package</option>
+                    <option value="custom">Custom Package</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="proposal">Upload Proposal</label>
+                <input type="file" id="proposal" name="proposal" accept=".pdf,.doc,.docx">
+                <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Accepted formats: PDF, DOC, DOCX</p>
+            </div>
+            <button type="submit">Submit Proposal</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
